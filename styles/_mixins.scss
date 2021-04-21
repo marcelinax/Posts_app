@@ -49,7 +49,7 @@
   font-size: $comment-item-font-size;
 }
 @mixin post-item-comments-icon {
-  background-image: url(/assets/bxs-comment.svg);
+  background-image: url('assets/bxs-comment.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
