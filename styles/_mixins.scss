@@ -1,0 +1,69 @@
+@import "variables";
+
+@mixin default-padding-margin {
+  padding: 0;
+  margin: 0;
+}
+@mixin default-box-shadow {
+  box-shadow: 0 0 $default-box-shadow-blur $default-box-shadow-color;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin post-item-size {
+  width: $post-item-width;
+  min-height: $post-item-height;
+}
+@mixin post-item-bg {
+  background-color: $default-bg;
+}
+@mixin post-item-margin-padding {
+  margin-bottom: $post-item-margin;
+  margin-right: $post-item-margin;
+  padding: $post-item-padding;
+}
+@mixin post-item-text-size {
+  width: $post-item-text-width;
+}
+@mixin post-item-font-color {
+  color: $post-item-font-color;
+}
+@mixin posts-list-size {
+  width: $posts-list-width;
+}
+@mixin posts-list-margin {
+  margin: $posts-list-margin 0;
+}
+@mixin post-item-comments-size {
+  width: $post-item-comments-size;
+  height: $post-item-comments-size;
+}
+@mixin comment-item-text {
+  font-weight: $comment-item-font-weight;
+  font-size: $comment-item-font-size;
+}
+@mixin post-item-comments-icon {
+  background-image: url(/assets/bxs-comment.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@mixin comment-item-margin-padding {
+  padding: 0 1rem;
+  margin-top: $comment-item-margin;
+}
+@mixin comment-item-after {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 1px;
+  bottom: -10px;
+  left: 0;
+  background-color: #ababab;
+}

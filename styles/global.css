@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .posts-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 3rem 0;
+}
+
+main .posts-list .post-list-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .posts-list .post-item {
+  width: 400px;
+  min-height: 200px;
+  background-color: white;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .posts-list .post-item:last-child {
+  margin-bottom: 0;
+}
+
+main .posts-list .post-item-text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+main .posts-list .post-item-text-box .post-item-title,
+main .posts-list .post-item-text-box .post-item-body {
+  width: 80%;
+}
+
+main .posts-list .post-item-text-box .post-item-title {
+  margin-bottom: 0.5rem;
+  color: #ababab;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2rem;
+}
+
+main .posts-list .post-item-text-box .post-item-body {
+  font-size: 14px;
+}
+
+main .posts-list .post-item-details-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+}
+
+main .posts-list .post-item-details-box .post-item-comments {
+  width: 20px;
+  height: 20px;
+  background-image: url(/assets/bxs-comment.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+main .posts-list .post-item-details-box .post-item-comments:hover {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+
+main .posts-list .post-item-details-box .post-item-comments::before {
+  content: "5";
+  position: absolute;
+  top: 0;
+  left: 30px;
+  font-size: 14px;
+  color: #ababab;
+  font-weight: 500;
+}
+
+main .posts-list .post-item-details-box .post-item-likes,
+main .posts-list .post-item-details-box .post-item-reply {
+  color: #ababab;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+main .posts-list .post-item .comment-item {
+  padding: 0 1rem;
+  margin-top: 1.5rem;
+  display: none;
+}
+
+main .posts-list .post-item .comment-item--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+main .posts-list .post-item .comment-item:last-child {
+  margin-bottom: 1.5rem;
+}
+
+main .posts-list .post-item .comment-item:last-child .comment-item-body:after {
+  background-color: transparent;
+}
+
+main .posts-list .post-item .comment-item:nth-child(even) {
+  text-align: right;
+}
+
+main .posts-list .post-item .comment-item-user {
+  font-weight: 400;
+  font-size: 13px;
+  width: 95%;
+  color: #ababab;
+}
+
+main .posts-list .post-item .comment-item-body {
+  width: 95%;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+main .posts-list .post-item .comment-item-body::after {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 1px;
+  bottom: -10px;
+  left: 0;
+  background-color: #ababab;
+}
+/*# sourceMappingURL=global.css.map */

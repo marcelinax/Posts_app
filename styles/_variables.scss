@@ -1,0 +1,30 @@
+//global
+$default-bg: white;
+$default-box-shadow-color: rgba(#000, 0.2);
+$default-box-shadow-blur: 20px;
+$default-font-color: black;
+$default-transition: all 0.3s;
+
+//posts list
+$posts-list-width: 100%;
+$posts-list-margin: 3rem;
+
+//post
+$post-item-width: 400px;
+$post-item-height: 200px;
+$post-item-title-font-size: 18px;
+$post-item-likes-font-size: 14px;
+$post-item-font-color: #ababab;
+$post-item-body-font-size: 14px;
+$post-item-margin: 2rem;
+$post-item-padding: 1rem;
+$post-item-text-width: 80%;
+$post-item-comments-size: 20px;
+$post-item-font-weight: 500;
+
+//comment
+// $comment-item-width: ;
+$comment-item-font-size: 13px;
+$comment-item-font-weight: 400;
+$comment-item-margin: 1.5rem;
+$comment-item-font-color: #ababab;

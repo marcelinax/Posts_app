@@ -1,0 +1,115 @@
+@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  @include default-padding-margin;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  @include flex-center;
+  .posts-list {
+    display: flex;
+    justify-content: center;
+    @include posts-list-size;
+    @include posts-list-margin;
+
+    .post-list-col {
+      @include flex-column;
+    }
+
+    .post-item {
+      @include post-item-size;
+      @include post-item-bg;
+      @include default-box-shadow;
+      @include post-item-margin-padding;
+      @include flex-column;
+      justify-content: space-between;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &-text-box {
+        @include flex-column;
+        margin-bottom: 1rem;
+        .post-item-title,
+        .post-item-body {
+          @include post-item-text-size;
+        }
+        .post-item-title {
+          margin-bottom: 0.5rem;
+          @include post-item-font-color;
+          font-size: $post-item-title-font-size;
+          font-weight: $post-item-font-weight;
+          line-height: 1.2rem;
+        }
+        .post-item-body {
+          font-size: $post-item-body-font-size;
+        }
+      }
+      &-details-box {
+        @include flex-center;
+        justify-content: space-around;
+        position: relative;
+
+        .post-item-comments {
+          @include post-item-comments-size;
+          @include post-item-comments-icon;
+          transition: $default-transition;
+          cursor: pointer;
+          &:hover {
+            transform: translateY(-8px);
+          }
+          &::before {
+            content: "5";
+            position: absolute;
+            top: 0;
+            left: 30px;
+            font-size: $post-item-likes-font-size;
+            color: $post-item-font-color;
+            font-weight: $post-item-font-weight;
+          }
+        }
+        .post-item-likes,
+        .post-item-reply {
+          color: $post-item-font-color;
+          font-size: $post-item-likes-font-size;
+          font-weight: $post-item-font-weight;
+        }
+      }
+      .comment-item {
+        @include comment-item-margin-padding;
+
+        display: none;
+        &--active {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+        }
+        &:last-child {
+          margin-bottom: $comment-item-margin;
+          .comment-item-body {
+            &:after {
+              background-color: transparent;
+            }
+          }
+        }
+        &:nth-child(even) {
+          text-align: right;
+        }
+
+        &-user {
+          @include comment-item-text;
+          width: 95%;
+          color: $comment-item-font-color;
+        }
+        &-body {
+          width: 95%;
+          @include comment-item-text;
+          &::after {
+            @include comment-item-after;
+          }
+        }
+      }
+    }
+  }
+}
