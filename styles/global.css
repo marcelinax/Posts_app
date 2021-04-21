@@ -109,7 +109,7 @@ main .posts-list .post-item-details-box {
 main .posts-list .post-item-details-box .post-item-comments {
   width: 20px;
   height: 20px;
-  background-image: url(/assets/bxs-comment.svg);
+  background-image: url(../assets/bxs-comment.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
